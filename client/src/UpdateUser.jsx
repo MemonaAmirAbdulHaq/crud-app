@@ -10,7 +10,7 @@ function UpdateUser () {
   const navigate =useNavigate()
 
    useEffect(() =>{
-axios.get('mongodb://localhost:27017//getUser/'+id)
+axios.get('mongodb://localhost:3000//getUser/'+id)
 .then(result =>{ console.log(result)
   setName(result.data.name)
   setEmail(result.data.email)
@@ -21,7 +21,7 @@ axios.get('mongodb://localhost:27017//getUser/'+id)
 
    const Update =(e) =>{
     e.preventDefault();
-    axios.put("mongodb://localhost:27017//updateUser/"+id,{name,email,age}) //localhost:3001
+    axios.put("mongodb://localhost:3000//updateUser/"+id,{name,email,age}) //localhost:3001
     .then(result => {
       console.log(result)
       navigate('/')
