@@ -5,13 +5,13 @@ function Users () {
     const [users,setUsers] =useState([])
 
   useEffect(()=>{
-         axios.get('https://crud-app-vebt.vercel.app/')  //localhost:3001
+         axios.get('mongodb://localhost:27017/')  //localhost:3001
          .then(result => setUsers(result.data))
 .catch(err =>console.log(err) )
   },[])
 
   const handleDelete =(id) =>{
-    axios.delete('https://crud-app-vebt.vercel.app/deleteUser/'+id)      //localhost:3001
+    axios.delete('mongodb://localhost:27017/deleteUser/'+id)      //localhost:3001
     .then(res=> {console.log(res)
       window.location.reload()
     })

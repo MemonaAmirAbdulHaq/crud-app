@@ -10,7 +10,7 @@ function UpdateUser () {
   const navigate =useNavigate()
 
    useEffect(() =>{
-axios.get('https://crud-app-vebt.vercel.app/getUser/'+id)
+axios.get('mongodb://localhost:27017//getUser/'+id)
 .then(result =>{ console.log(result)
   setName(result.data.name)
   setEmail(result.data.email)
@@ -21,7 +21,7 @@ axios.get('https://crud-app-vebt.vercel.app/getUser/'+id)
 
    const Update =(e) =>{
     e.preventDefault();
-    axios.put("https://crud-app-vebt.vercel.app/updateUser/"+id,{name,email,age}) //localhost:3001
+    axios.put("mongodb://localhost:27017//updateUser/"+id,{name,email,age}) //localhost:3001
     .then(result => {
       console.log(result)
       navigate('/')
