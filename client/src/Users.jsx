@@ -5,13 +5,13 @@ function Users () {
     const [users,setUsers] =useState([])
 
   useEffect(()=>{
-         axios.get('mongodb://localhost:3000/')  //localhost:3001
+         axios.get('http://localhost:3001/')  //localhost:3001
          .then(result => setUsers(result.data))
 .catch(err =>console.log(err) )
   },[])
 
   const handleDelete =(id) =>{
-    axios.delete('mongodb://localhost:3000/deleteUser/'+id)      //localhost:3001
+    axios.delete('http://localhost:3001/deleteUser/'+id)      //localhost:3001
     .then(res=> {console.log(res)
       window.location.reload()
     })
