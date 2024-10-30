@@ -48,6 +48,6 @@ app.post("/createUser",(req,res) =>{
     .then(users => res.json(users))
      .catch(err => res.json(err))
 })
-app.listen(3001,()=> {            
+app.listen(3000,()=> {            
     console.log("Server is Running")
 })
