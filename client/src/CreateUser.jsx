@@ -10,7 +10,7 @@ function CreateUser () {
 
   const  Submit =(e) =>{
     e.preventDefault();
-    axios.post("https://crud-app-vebt.vercel.app/createUser",{name,email,age})  //localhost:3001//
+    axios.post("mongodb://localhost:27017//createUser",{name,email,age})  //localhost:3001//
     .then(result => {
       console.log(result)
       navigate('/')
