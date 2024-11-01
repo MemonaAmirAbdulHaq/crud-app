@@ -6,11 +6,11 @@ const UserModel=require('./models/Users')
 const app= express()
 app.use(cors(
      
-   { origin:[""],
-    methods:["GET","POST","PUT","DELETE"],
-    credentials:true}
+ 
 ))     
-   
+//{ origin:[""],
+  //  methods:["GET","POST","PUT","DELETE"],
+   // credentials:true}
 app.use(express.json())
 
 mongoose.connect("mongodb://127.0.0.1:27017/crud")
