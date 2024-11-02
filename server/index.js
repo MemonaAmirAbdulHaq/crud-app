@@ -49,6 +49,6 @@ app.post("/createUser",(req,res) =>{
     .then(users => res.json(users))
      .catch(err => res.json(err))
 })
-app.listen( ()=> {            
+app.listen(PORT, ()=> {            
     console.log("Server is Running")
 })
