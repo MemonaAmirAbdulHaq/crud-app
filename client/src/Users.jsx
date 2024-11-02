@@ -5,13 +5,13 @@ function Users () {
     const [users,setUsers] =useState([])
 
   useEffect(()=>{
-         axios.get('http://localhost:3001')  //localhost:3001
+         axios.get('https://crud-app-backend-zeta.vercel.app')  //localhost:3001
          .then(result => setUsers(result.data))
 .catch(err =>console.log(err) )
   },[])
 
   const handleDelete =(id) =>{
-    axios.delete('http://localhost:3001/deleteUser/'+id)      //localhost:3001
+    axios.delete('https://crud-app-backend-zeta.vercel.app/deleteUser/'+id)      //localhost:3001
    
     .then(res=> {console.log(res)
       window.location.reload()
