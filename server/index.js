@@ -5,7 +5,7 @@ const UserModel=require('./models/Users')
  
 const app= express()
 app.use(cors({
-    origin:["https://crud-app-psi-rose.vercel.app"],
+    origin:["https://crud-app-chdi.vercel.app"],
 method:["GET","PUT","POST","DELETE"],
 credentials: true
 }))     
