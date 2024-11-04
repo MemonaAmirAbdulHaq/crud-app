@@ -4,13 +4,7 @@ const cors =require('cors')
 const UserModel=require('./models/Users')
  
 const app= express()
-app.use(cors({
-    origin:["https://crud-app-frontend-umber.vercel.app"],
-    method:["put","post","get","delete"],
-    credentials:true
-           
-       }
-))     
+app.use(cors())     
 
 app.use(express.json())
 
